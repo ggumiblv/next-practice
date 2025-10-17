@@ -10,7 +10,23 @@ export default function Home() {
         <Link href="/about">About</Link>
       </header>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image src={MouseImage} alt="gulnazka" className="w-50" />
+        <Image
+          src={MouseImage}
+          alt="gulnazka"
+          width={200}
+          height={200}
+          placeholder="blur"
+          //onLoad={'изображение загружено'}
+        />
+        {/* fill={true} - изображение заполнит родительский элемент, при этом свойстве можно не указывать размеры, при этом родитель должен иметь position: relative/fixe/absolute
+        objectFit="cover" - можно указывать здесь
+        style={imageStyle} - стили
+        priority={true} - если нужно предварительно загрузить изображение
+        loading={lazy/eager} - когда стоит загрузить изображение, когда оно будет приближено к окну видимости или сразу
+        placeholder="empty/blur/data:image/..."
+        onLoad={'изображение загружено'} - функция обратного вызова, которая будет вызвана, когда изображение загрузится
+        
+        */}
         {/* <Image
           className="dark:invert"
           src="/next.svg"
