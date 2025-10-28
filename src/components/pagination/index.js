@@ -21,7 +21,7 @@ const Pagination = ({ totalPages }) => {
   const allPages = generatePagination(currentPage, totalPages);
 
   return (
-    <div>
+    <div className="flex flex-col">
       <PaginationArrow
         direction="left"
         href={createPageURL(currentPage - 1)}
